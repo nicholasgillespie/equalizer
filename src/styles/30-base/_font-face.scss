@@ -1,25 +1,14 @@
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  font-weight: 500;
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
   font-display: swap;
-  src: url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Medium.woff2")
-      format("woff2"),
-    url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Medium.woff") format("woff");
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.woff2") format("woff2"),
+    url("/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: "IBM Plex Sans";
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Bold.woff2")
-      format("woff2"),
-    url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  font-weight: 800;
-  font-display: swap;
-  src: url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-ExtraBold.woff2")
-      format("woff2"),
-    url("/fonts/Plus_Jakarta_Sans/PlusJakartaSans-ExtraBold.woff")
-      format("woff");
+  src: url("/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.woff2") format("woff2"),
+    url("/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.woff") format("woff");
 }
