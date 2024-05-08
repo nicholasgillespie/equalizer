@@ -15,21 +15,21 @@
 .l-canvas {
   --layout-breakout: calc(var(--layout-base-max) * 1.2);
   --canvas-full-width: minmax(var(--space-gutter), 1fr);
-  --canvas-breakout: minmax(
-    0,
-    calc(((var(--layout-breakout) - var(--layout-base-max))) / 2)
-  );
   --canvas-content: min(
-    100% - (var(--space-gutter) * 2),
+    100% - (var(--space-gutter) * 3),
     var(--layout-base-max)
   );
+  --canvas-content-3-4: calc(var(--canvas-content) * 3 / 4);
+  --canvas-content-1-4: calc((var(--canvas-content) - var(--space-gutter)) / 4);
 
   display: grid;
   grid-template-columns:
     [full-width-start] var(--canvas-full-width)
-    [breakout-start] var(--canvas-breakout)
-    [content-start] var(--canvas-content) [content-end]
-    var(--canvas-breakout) [breakout-end]
+    [content-start] var(--canvas-content-3-4)
+    [content-3-4-end]
+    var(--space-gutter)
+    [content-1-4-start]
+    var(--canvas-content-1-4) [content-end]
     var(--canvas-full-width) [full-width-end];
   position: relative;
 

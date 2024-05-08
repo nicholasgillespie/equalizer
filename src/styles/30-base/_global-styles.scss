@@ -6,7 +6,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  outline: solid 1px hotpink;
+  // outline: solid 1px hotpink;
 }
 
 // GLOBAL SETTINGS ////////////////////
@@ -18,7 +18,7 @@ body {
   font-family: var(--font-display);
   font-weight: var(--font-weight-base);
   // letter-spacing: ???;
-  line-height: var(--leading-loose);
+  line-height: var(--leading);
   word-break: break-word;
 }
 
@@ -33,9 +33,10 @@ h1,
 h2,
 h3,
 h4 {
-  // font-family: get(font-family, brand);
-  // font-weight: get(font-weight, medium);
-  letter-spacing: -0.02ch;
+  font-family: get(font-family, base);
+  font-weight: get(font-weight, bold);
+  line-height: get(line-height, flat);
+  letter-spacing: get(letter-spacing, tight);
   text-wrap: balance;
   hyphens: auto;
   color: var(--color-heading-text);
@@ -44,7 +45,6 @@ h4 {
 h1 {
   font-size: var(--text-size-heading-1);
   max-inline-size: 30ch;
-  color: var(--color-heading-text);
 }
 
 h2 {
@@ -67,7 +67,7 @@ button,
 .button,
 input,
 label {
-  line-height: get(line-height, short);
+  // line-height: get(line-height, short);
 }
 
 // CONTENT ELEMENTS ////////////////////
@@ -133,7 +133,7 @@ table {
   color: var(--button-text, var(--color-surface-text));
   font-size: var(--button-font-size, var(--text-size-base));
   font-family: var(--button-font, var(--font-display));
-  font-weight: get(font-weight, medium);
+  font-weight: get(font-weight, regular);
   text-transform: capitalize;
   text-decoration: none;
   border: 2px solid var(--button-border, var(--color-surface-border));
