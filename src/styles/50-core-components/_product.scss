@@ -1,0 +1,65 @@
+.testimonial {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: [background-start image-start text-start] 1fr [text-end image-start background-end];
+
+  grid-template-rows:
+    [image-start] 14rem
+    [background-start]
+    5rem [text-start]
+    auto
+    [image-end] 5rem
+    [background-end]
+    14rem [text-end];
+
+  .images {
+    grid-area: image;
+    margin-inline-start: var(--space-3xl);
+    max-inline-size: fit-content;
+
+    & > div:first-of-type {
+      position: relative;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    img:first-of-type {
+      position: absolute;
+      max-block-size: 100%;
+      inset-block-end: 0;
+      inset-inline-end: 0;
+      transform: translateX(75%);
+    }
+
+    img:last-of-type {
+      z-index: 1;
+      max-block-size: max(42rem, 60vh);
+    }
+  }
+
+  .content {
+    --space-stack: 1em;
+    --stack-horizontal-alignment: stretch;
+
+    grid-area: text;
+    z-index: 2;
+    margin-inline-start: auto;
+    padding-inline-end: var(--space-3xl);
+    margin-block-end: auto;
+    max-inline-size: calc(
+      (var(--layout-base-max) + calc(var(--space-3xl) / 2)) / 2
+    );
+    max-inline-size: calc((var(--layout-base-max)) / 2);
+  }
+
+  &::after {
+    content: "";
+    grid-area: background;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 1rem;
+    background-color: var(--color-surface-bg);
+  }
+}

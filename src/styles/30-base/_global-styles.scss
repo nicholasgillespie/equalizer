@@ -6,7 +6,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  // outline: solid 1px hotpink;
+  outline: solid 1px hotpink;
 }
 
 // GLOBAL SETTINGS ////////////////////
@@ -145,7 +145,6 @@ table {
   }
 
   &[data-button="hero"] {
-    --space-flow: 2em;
     --button-padding: var(--space-s) var(--space-l);
     --button-bg: var(--color-orange-to-pink);
 
