@@ -6,7 +6,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  outline: solid 1px hotpink;
+  // outline: solid 1px red;
 }
 
 // GLOBAL SETTINGS ////////////////////
@@ -133,33 +133,24 @@ table {
   color: var(--button-text, var(--color-surface-text));
   font-size: var(--button-font-size, var(--text-size-base));
   font-family: var(--button-font, var(--font-display));
-  font-weight: get(font-weight, regular);
+  font-weight: get(font-weight, bold);
   text-transform: capitalize;
   text-decoration: none;
   border: 2px solid var(--button-border, var(--color-surface-border));
-  border-radius: var(--button-radius, 2em);
+  border-radius: var(--button-radius, 1rem);
 
   &:hover,
   &:focus-visible {
     --button-bg: var(--color-surface-bg-interact);
   }
 
-  &[data-button="hero"] {
-    --button-padding: var(--space-s) var(--space-l);
-    --button-bg: var(--color-orange-to-pink);
-
-    &:hover,
-    &:focus-visible {
-      box-shadow: inset 0 0 0 999px hsla(0, 0%, 100%, 0.4);
-    }
-  }
-
   &[data-button="alternate"] {
-    --button-bg: var(--color-purple-to-pink);
+    --button-bg: var(--color-global-bg);
+    --button-text: var(--color-global-text);
 
     &:hover,
     &:focus-visible {
-      box-shadow: inset 0 0 0 999px hsla(0, 0%, 100%, 0.4);
+      --button-bg: var(--color-light-orange);
     }
   }
 }

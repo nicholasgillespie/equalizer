@@ -28,8 +28,8 @@
     <script type="module" defer src="/src/scripts/main.js"></script>
   </head>
   <body>
-    <header class="l-canvas">
-      <!-- <nav aria-label="Website">
+    <header>
+      <nav aria-label="Website">
         <ul role="list">
           <li>
             <a href="#">
@@ -49,8 +49,7 @@
         </p>
       </section>
       <img inert class="pattern-1" src="/images/bg-pattern-1.svg" alt="" />
-
-      <picture>
+      <picture class="pattern-2">
         <source
           srcset="./images/bg-main-desktop.png"
           media="(min-width: 801px)"
@@ -67,23 +66,22 @@
           type="image/png"
         />
         <img
-          class="pattern-2"
           src="./images/bg-main-desktop.png"
           alt="Main background"
           width="1046"
           height="938"
           loading="eager"
         />
-      </picture> -->
+      </picture>
     </header>
 
     <main class="l-canvas">
-      <section class="testimonial">
+      <section class="product">
         <div class="images">
           <div>
-            <img src="./public/images/bg-pattern-2.svg" alt="" />
+            <img src="./images/bg-pattern-2.svg" alt="" />
             <img
-              src="./public/images/illustration-app.png"
+              src="./images/illustration-app.png"
               alt="Illustration of the app"
             />
           </div>
@@ -96,71 +94,56 @@
               and spatial audio. Take your listening experience to a whole new
               level and access all our incredible features!
             </p>
-            <p><b>$4</b> / month</p>
+            <p><b>$4 </b>/ month</p>
             <div class="l-stack">
               <a class="button" href="#">iOS Download</a>
-              <a class="button" href="#">Android Download</a>
+              <a class="button" data-button="alternate" href="#"
+                >Android Download</a
+              >
             </div>
           </div>
         </div>
       </section>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur,
-        ea beatae quae amet, cum atque explicabo vel odio nobis minus voluptate
-        sed possimus dignissimos architecto dolor recusandae adipisci pariatur,
-        quisquam veniam quasi fuga? Eveniet, sunt officia itaque facere harum
-        repellat? Minus dolores quis saepe ipsa itaque tenetur veniam temporibus
-        magni, impedit sunt ut optio veritatis! Debitis quia odio blanditiis
-        praesentium commodi perferendis. Laboriosam rem soluta animi esse modi
-        amet dicta repudiandae accusamus officiis quam voluptates at id, veniam
-        quia quo error beatae iste illum, voluptatibus mollitia. Voluptatum
-        vitae facilis pariatur sint tempora error consequuntur ipsa quos
-        repellendus? Odio cum atque architecto quia recusandae, laudantium hic
-        quibusdam vel delectus molestiae dicta est dolorem voluptatibus non ut
-        doloribus! Delectus vero possimus sit natus excepturi corrupti
-        architecto fugiat facilis fugit magnam debitis, libero eius ducimus non
-        ex vel amet blanditiis rerum illo suscipit ea. Non similique quia labore
-        quibusdam, deserunt voluptates consectetur libero explicabo odit iure
-        quis a ex. Laudantium debitis atque dolores impedit odit iure, placeat
-        nobis. Corporis cupiditate minima quo, ut in voluptatem autem illum
-        doloribus voluptas quaerat. Tempore, molestias repellendus cupiditate
-        non necessitatibus error quas quis amet iste fugiat perspiciatis minima
-        architecto eos ab nihil veritatis nemo libero asperiores atque corrupti
-        sit quia ad nobis? Accusamus voluptatibus suscipit delectus saepe
-        consequuntur. Aliquam facere earum voluptatibus labore incidunt harum
-        perspiciatis? Repellat quam, deserunt perferendis ducimus cupiditate ab
-        iure possimus veniam magnam eius excepturi voluptate molestiae corporis
-        commodi adipisci nostrum tempora fuga ea quia. Magni doloribus animi
-        aspernatur rerum laborum quae nulla velit eaque ipsam, molestias at,
-        maiores commodi ipsum. Dolorum quas corporis odit repellendus ut
-        voluptates sunt qui illo at, ducimus dolorem error amet enim nemo
-        voluptatem voluptatibus dignissimos consectetur. Omnis perspiciatis
-        maiores ipsum ipsa perferendis totam alias voluptates! Sit doloribus,
-        dolorum asperiores accusamus alias molestiae reiciendis necessitatibus
-        harum quod nihil dolor hic quas! Voluptatibus quasi odit provident
-        inventore velit veritatis illum? Odio consequuntur quod sint rem totam
-        nulla tenetur magnam. Inventore quidem molestias quas facere odio labore
-        sunt sit repellat cumque vel, eius quam tempora itaque dolores
-        voluptatum tempore quaerat error saepe doloribus unde, rem fugit autem.
-        In accusantium nihil vitae consequuntur delectus, consectetur aperiam
-        nam illo officia sequi beatae quibusdam sunt fugit totam voluptatum a
-        ipsa iusto quod maxime natus quae. Dolorem facilis deleniti tenetur
-        numquam eveniet neque eius doloremque soluta, vitae officiis quis error
-        nesciunt necessitatibus molestias? Similique sapiente fugit repellat,
-        reiciendis officia, provident numquam quisquam, consequatur unde nihil
-        eum. Rerum veritatis accusamus tempore molestiae nemo fugit excepturi,
-        cupiditate minima, delectus, nulla voluptates suscipit omnis. Tempore
-        delectus eum, accusantium ab qui ratione itaque sapiente sequi omnis
-        pariatur perferendis. Esse cum labore, quam fuga doloribus dignissimos!
-        Reiciendis debitis numquam nobis quae, facilis modi! Quam iste tenetur
-        eum et libero itaque quisquam, iusto vero ea temporibus nostrum corporis
-        error id recusandae asperiores ut molestias totam quia facere nulla
-        consequuntur. Magni quos odio non repellat est at expedita distinctio ex
-        pariatur, nobis ad a saepe harum. Deleniti cum neque ipsam ex blanditiis
-        amet expedita rem vitae ut, consequuntur distinctio sunt. Obcaecati.
-      </p>
     </main>
 
-    <footer class="l-canvas">x</footer>
+    <footer class="l-canvas l-region">
+      <nav aria-label="Website">
+        <div class="l-repel">
+          <div class="l-cluster">
+            <a href="#">
+              <img inert src="/images/logo.svg" alt="Home" />
+              <span class="u-vh">Skilled home page</span>
+            </a>
+            <div>
+              <p>All rights reserved © Equalizer 2021</p>
+              <p>
+                Have any problems? Contact us via social media or email us at
+                equalizer@example.com
+              </p>
+            </div>
+          </div>
+          <ul role="list" class="l-cluster">
+            <li>
+              <a href="#">
+                <img inert src="/images/icon-facebook.svg" alt="" />
+                <span class="u-vh">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img inert src="/images/icon-twitter.svg" alt="" />
+                <span class="u-vh">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img inert src="/images/icon-instagram.svg" alt="" />
+                <span class="u-vh">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>

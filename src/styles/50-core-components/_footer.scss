@@ -1,0 +1,34 @@
+footer {
+  --space-region: var(--space-2xl);
+  --cluster-vertical-alignment: flex-start;
+  --repel-flex-wrap: nowrap;
+  --space-repel: var(--space-xl) var(--space-3xl);
+  --space-cluster: var(--space-xl) var(--space-3xl);
+
+  p {
+    max-inline-size: 40ch;
+  }
+
+  ul {
+    --cluster-flex-wrap: nowrap;
+    --space-cluster: var(--space-gutter);
+    margin-block-start: auto;
+
+    img {
+      max-inline-size: none;
+    }
+
+    a:hover {
+      filter: invert(77%) sepia(47%) saturate(5927%) hue-rotate(325deg)
+        brightness(99%) contrast(98%);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    --cluster-flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 600px) {
+    --repel-flex-wrap: wrap;
+  }
+}

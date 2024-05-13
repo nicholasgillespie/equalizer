@@ -1,95 +1,110 @@
-:is(header, #specBoost) {
-  // Styling elements
-  nav {
-    margin-block-start: var(--space-l);
+header {
+  --canvas-full-width: minmax(var(--space-gutter), 1fr);
+  --canvas-content: min(
+    100% - (var(--space-gutter) * 2),
+    var(--layout-base-max)
+  );
+  --canvas-content-three-quarters: calc(var(--canvas-content) * 3 / 4);
+  --canvas-content-one-quarter: calc(var(--canvas-content) / 4);
 
-    .logo {
-      block-size: var(--size-step-2);
-    }
+  display: grid;
+  grid-template-columns:
+    [full-width-start] var(--canvas-full-width)
+    [content-start] var(--canvas-content-three-quarters) [pattern-start] var(
+      --canvas-content-one-quarter
+    )
+    [content-end]
+    var(--canvas-full-width) [pattern-end full-width-end];
+  position: relative;
+  overflow: hidden;
+
+  & > * {
+    grid-column: content;
   }
 
   section {
-    grid-column: content-start / content-3-4-end;
+    grid-column: content-start / pattern-start;
   }
 
-  p {
-    --space-flow: var(--space-m-l);
-  }
-
-  // Styling patterns
   .pattern-1 {
     position: absolute;
-    inset-inline-end: 0;
-    grid-column: content-1-4-start / full-width-end;
+    grid-column: pattern;
+    top: 0;
+    right: 0;
+    // padding-inline-start: var(--space-gutter);
   }
 
   .pattern-2 {
-    grid-column: full-width;
+    grid-column: full-width-start / content-end;
     position: absolute;
-    inset: 0;
-    margin: 0 auto;
-    transform: translateX(0%) translateY(15%) scale(1.75);
+    right: 0;
+    transform: translateX(0%) translateY(10%) scale(1.75);
     z-index: -1;
   }
 
-  // Custom media query to adjust canvas layout
-  @media screen and (max-width: 1100px) {
-    --canvas-content: min(
-      100% - (var(--space-gutter) * 3),
-      var(--layout-base-max)
-    );
-    --canvas-content-1-4: calc(
-      (var(--canvas-content) + var(--space-gutter)) / 4
-    );
-
-    grid-template-columns:
-      [full-width-start] var(--canvas-full-width)
-      [content-start] var(--canvas-content-3-4)
-      [content-3-4-end content-1-4-start]
-      var(--canvas-content-1-4) [content-end]
-      var(--canvas-full-width) [full-width-end];
-
-    .pattern-2 {
-      transform: translateX(-10%) translateY(5%) scale(1.4);
-    }
-  }
-
-  // Custom media query to adjust pattern
-  @media screen and (max-width: 660px) {
-    .pattern-1 {
-      padding-inline-start: var(--space-gutter);
-    }
-  }
-
-  // Media query for tablet
-  @media screen and (max-width: 800px) {
-    .pattern-2 {
-      transform: translateX(-5%) translateY(-10%) scale(1.4);
-    }
-  }
-
-  // Media query for mobile
-  @media screen and (max-width: 600px) {
-    --canvas-content: min(
-      100% - (var(--space-gutter) * 2),
-      var(--layout-base-max)
-    );
-
-    grid-template-columns:
-      [full-width-start] var(--canvas-full-width)
-      [content-start] var(--canvas-content) [content-end]
-      var(--canvas-full-width) [full-width-end];
-
-    section {
-      grid-column: content-start / content-end;
-    }
-
-    .pattern-1 {
-      display: none;
-    }
-
-    .pattern-2 {
-      transform: translateX(30%) translateY(-25%) scale(1.2);
-    }
+  nav {
+    margin-block-start: var(--space-l);
   }
 }
+
+// :is(header, #specBoost) {
+//   // grid-column: content-start / full-width-end;
+//   nav {
+//     margin-block-start: var(--space-l);
+
+//     .logo {
+//       block-size: var(--size-step-2);
+//     }
+//   }
+
+//   section {
+//     // grid-column: content-start / content-3-4-end;
+//   }
+
+//   p {
+//     --space-flow: var(--space-m-l);
+//   }
+
+//   // Styling patterns
+//   .pattern-1 {
+//     // background-color: red;
+//     position: absolute;
+//     // left: 0;
+//     top: 0;
+//     right: 0;
+//     // width: 100%;
+//     // inset-inline-end: 0;
+//     // grid-column: content-1-4-start / full-width-end;
+//   }
+
+//   .pattern-2 {
+//     position: absolute;
+//     inset: 0;
+//     margin: 0 auto;
+//     transform: translateX(0%) translateY(15%) scale(1.75);
+//     z-index: -1;
+//   }
+
+//   // Custom media query to adjust canvas layout
+//   @media screen and (max-width: 1100px) {
+//   }
+
+//   // Custom media query to adjust pattern
+//   @media screen and (max-width: 660px) {
+//   }
+
+//   // Media query for tablet
+//   @media screen and (max-width: 800px) {
+//   }
+
+//   // Media query for mobile
+//   @media screen and (max-width: 600px) {
+//     .pattern-1 {
+//       display: none;
+//     }
+
+//     .pattern-2 {
+//       transform: translateX(30%) translateY(-25%) scale(1.2);
+//     }
+//   }
+// }

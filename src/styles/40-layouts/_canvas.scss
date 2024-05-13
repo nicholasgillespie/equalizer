@@ -13,23 +13,16 @@
  */
 
 .l-canvas {
-  --layout-breakout: calc(var(--layout-base-max) * 1.2);
   --canvas-full-width: minmax(var(--space-gutter), 1fr);
   --canvas-content: min(
-    100% - (var(--space-gutter) * 3),
+    100% - (var(--space-gutter) * 2),
     var(--layout-base-max)
   );
-  --canvas-content-3-4: calc(var(--canvas-content) * 3 / 4);
-  --canvas-content-1-4: calc((var(--canvas-content) - var(--space-gutter)) / 4);
 
   display: grid;
   grid-template-columns:
     [full-width-start] var(--canvas-full-width)
-    [content-start] var(--canvas-content-3-4)
-    [content-3-4-end]
-    var(--space-gutter)
-    [content-1-4-start]
-    var(--canvas-content-1-4) [content-end]
+    [content-start]var(--canvas-content) [content-end]
     var(--canvas-full-width) [full-width-end];
   position: relative;
 
@@ -37,17 +30,7 @@
     grid-column: content;
   }
 
-  & > &--breakout {
-    grid-column: breakout;
-  }
-
   & > &--full-width {
     grid-column: full-width;
-    display: grid;
-    grid-template-columns: inherit;
-
-    &[data-full-width="contained"] {
-      padding-inline: var(--space-gutter);
-    }
   }
 }
