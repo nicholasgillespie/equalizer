@@ -16,7 +16,6 @@ header {
     [content-end]
     var(--canvas-full-width) [pattern-end full-width-end];
   position: relative;
-  overflow: hidden;
 
   & > * {
     grid-column: content;
@@ -31,7 +30,21 @@ header {
     grid-column: pattern;
     top: 0;
     right: 0;
-    // padding-inline-start: var(--space-gutter);
+    padding-inline-start: var(--space-gutter);
+
+    @media screen and (max-width: 1157px) {
+      padding-inline-start: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    section {
+      grid-column: content-start / content-end;
+    }
+
+    .pattern-1 {
+      display: none;
+    }
   }
 
   .pattern-2 {
@@ -46,65 +59,3 @@ header {
     margin-block-start: var(--space-l);
   }
 }
-
-// :is(header, #specBoost) {
-//   // grid-column: content-start / full-width-end;
-//   nav {
-//     margin-block-start: var(--space-l);
-
-//     .logo {
-//       block-size: var(--size-step-2);
-//     }
-//   }
-
-//   section {
-//     // grid-column: content-start / content-3-4-end;
-//   }
-
-//   p {
-//     --space-flow: var(--space-m-l);
-//   }
-
-//   // Styling patterns
-//   .pattern-1 {
-//     // background-color: red;
-//     position: absolute;
-//     // left: 0;
-//     top: 0;
-//     right: 0;
-//     // width: 100%;
-//     // inset-inline-end: 0;
-//     // grid-column: content-1-4-start / full-width-end;
-//   }
-
-//   .pattern-2 {
-//     position: absolute;
-//     inset: 0;
-//     margin: 0 auto;
-//     transform: translateX(0%) translateY(15%) scale(1.75);
-//     z-index: -1;
-//   }
-
-//   // Custom media query to adjust canvas layout
-//   @media screen and (max-width: 1100px) {
-//   }
-
-//   // Custom media query to adjust pattern
-//   @media screen and (max-width: 660px) {
-//   }
-
-//   // Media query for tablet
-//   @media screen and (max-width: 800px) {
-//   }
-
-//   // Media query for mobile
-//   @media screen and (max-width: 600px) {
-//     .pattern-1 {
-//       display: none;
-//     }
-
-//     .pattern-2 {
-//       transform: translateX(30%) translateY(-25%) scale(1.2);
-//     }
-//   }
-// }

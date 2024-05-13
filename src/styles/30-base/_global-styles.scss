@@ -26,6 +26,10 @@ body {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+
+  & > div:first-of-type {
+    overflow: hidden;
+  }
 }
 
 // TYPOGRAPHY ////////////////////
