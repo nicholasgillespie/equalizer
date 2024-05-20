@@ -4,7 +4,7 @@ Visit the live website here: [Equalizer Project Website](https://nicholasgillesp
 
 ## Overview
 
-The Equalizer e-leaning project is a Vite and PostCSS-based project, hosted on GitHub Pages. It incorporates the in-development W3C design system, utilizing SCSS syntax for styling.
+The Equalizer audio enhancement project is a Vite and PostCSS-based project, hosted on GitHub Pages. It incorporates the in-development W3C design system, utilizing SCSS syntax for styling.
 
 [![Screenshot of the Equalizer project](./docs/design/preview.jpg)](https://nicholasgillespie.github.io/equalizer/)
 
